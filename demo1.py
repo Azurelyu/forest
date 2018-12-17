@@ -18,5 +18,12 @@ print(scores1.mean())
 
 # 随机森林
 clf2 = RandomForestClassifier(n_estimators=10, max_depth=None, min_samples_split=2, random_state=0)
-scores2 =
+scores2 = cross_val_score(clf2, X, y)
+print(scores2.mean())
+
+
+# ExtraTree分类器集合
+clf3 = ExtraTreesClassifier(n_estimators=10, max_depth=None, min_samples_split=2, random_state=0)
+scores3 = cross_val_score(clf3, X, y)
+print(scores3.mean())
 
